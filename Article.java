@@ -18,12 +18,12 @@ public class Article {
     static class ArticleComparator implements Comparator<Article> {
         @Override
         public int compare(Article o1, Article o2) {
-            if (o1.getAuthor() != null && o2.getAuthor() != null
-                    && o1.getAuthor().equals(o2.getAuthor())) {
-                return o1.getAuthor().compareTo(o2.getAuthor());
+            if (o1.getAuthor().compareTo(o2.getAuthor())==0) {
+                return Integer.compare(o1.getSymbols(), o2.getSymbols());
+
 
             } else {
-                return Integer.compare(o1.getSymbols(), o2.getSymbols());
+                return o1.getAuthor().compareTo(o2.getAuthor());
             }
         }
     }
