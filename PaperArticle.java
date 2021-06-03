@@ -13,4 +13,9 @@ public class PaperArticle extends Article {
         return symbols == that.symbols &&
                 Objects.equals(author, that.author);
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
