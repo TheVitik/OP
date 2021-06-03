@@ -15,11 +15,14 @@ public class Article {
     public String toString(){
         return author+" "+symbols;
     }
+    //Створюємо вкладений статичний клас компаратора
     static class ArticleComparator implements Comparator<Article> {
         @Override
         public int compare(Article o1, Article o2) {
+            //Якщо автор однаковий, то порівнюємо за кількістю символів
             if (o1.getAuthor().compareTo(o2.getAuthor())==0) {
                 return Integer.compare(o1.getSymbols(), o2.getSymbols());
+            //Інкаше порівнюємо авторів
             } else {
                 return o1.getAuthor().compareTo(o2.getAuthor());
             }
