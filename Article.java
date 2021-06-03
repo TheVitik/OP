@@ -20,8 +20,6 @@ public class Article {
         public int compare(Article o1, Article o2) {
             if (o1.getAuthor().compareTo(o2.getAuthor())==0) {
                 return Integer.compare(o1.getSymbols(), o2.getSymbols());
-
-
             } else {
                 return o1.getAuthor().compareTo(o2.getAuthor());
             }

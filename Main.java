@@ -15,5 +15,15 @@ public class Main {
         for (Article i:treeset){
             System.out.println(i.getAuthor() + " " + i.getSymbols());
         }
+        Comparator<Article> comp = new Comparator<Article>() {
+            @Override
+            public int compare(Article o1, Article o2) {
+                return Integer.compare(o1.getSymbols(), o2.getSymbols());
+            }
+        };
+        Arrays.sort(articles,comp);
+        for (Article i:articles){
+            System.out.println(i.getSymbols() + " " + i.getAuthor());
+        }
     }
 }
